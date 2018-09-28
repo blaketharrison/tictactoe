@@ -11,12 +11,10 @@
 <ion-content padding>
   <ion-grid>
     <ion-row *ngFor="let row of rows; let r = index">
-      <ion-col col-3></ion-col>
-      <ion-col (click)="gameMove(r, c)" class="cell" col-2 *ngFor="let col of cols; let c = index">
+      <ion-col (click)="gameMove(r, c)" class="cell" col-4 *ngFor="let col of cols; let c = index">
           <ion-icon *ngIf="gameBoard[r][c] === 'X'" name="close"></ion-icon>
           <ion-icon *ngIf="gameBoard[r][c] === 'O'" name="radio-button-off"></ion-icon>
       </ion-col>
-      <ion-col col-3></ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
